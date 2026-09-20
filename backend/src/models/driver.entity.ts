@@ -10,4 +10,6 @@ export class DriverEntity {
   @Column() hireDate!: string;
   @Column() status!: string;
   @Column('float') monthlySalary!: number;
+  @Column({ nullable: true }) currentDispatchId?: number;
+  @Column({ default: 1 }) version!: number;
 }

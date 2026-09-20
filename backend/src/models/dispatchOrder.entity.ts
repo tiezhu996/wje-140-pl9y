@@ -19,4 +19,11 @@ export class DispatchOrderEntity {
   @Column('float') estimatedTollCost!: number;
   @Column() status!: string;
   @Column('float') profit!: number;
+  @Column({ default: false }) coldChainRequired!: boolean;
+  @Column('float', { nullable: true }) startMileage?: number;
+  @Column('float', { nullable: true }) actualMileage?: number;
+  @Column('float', { nullable: true }) actualFuelCost?: number;
+  @Column('float', { nullable: true }) actualTollCost?: number;
+  @Column('float', { nullable: true }) laborCost?: number;
+  @Column({ default: 1 }) version!: number;
 }
